@@ -1,0 +1,85 @@
+\documentclass{emulateapj} 
+ 
+\usepackage[dvipdf]{epsfig} 
+\usepackage[dvips]{rotating}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+
+\newcommand{\IRAS}{{\it IRAS}}
+\newcommand{\HERSCHEL}{{\it Herschel}}
+\newcommand{\SPITZER}{{\it Spitzer}}
+\newcommand{\PLANCK}{{\it Planck}}
+\newcommand{\AKARI}{{\it AKARI}}
+\newcommand{\COBE}{{\it COBE}}
+\newcommand{\WISE}{{\it WISE}}
+
+\bibpunct{(}{)}{;}{a}{}{,} 
+ 
+\shorttitle{\PLANCK~2015 Dust Modeling}
+ 
+\shortauthors{Meisner \& Finkbeiner} 
+
+\begin{document}
+
+\title{Modeling thermal dust emission in the {\it PLANCK} 2015 release maps}
+\author{Aaron M. Meisner\altaffilmark{1,2}}
+\author{Douglas P. Finkbeiner\altaffilmark{1,2}}
+\altaffiltext{1}{Department of Physics, Harvard University, 17 Oxford Street, 
+Cambridge, MA 02138, USA; ameisner@fas.harvard.edu}
+\altaffiltext{2}{Harvard-Smithsonian Center for Astrophysics, 60 Garden St, 
+Cambridge, MA 02138, USA; dfinkbeiner@cfa.harvard.edu}
+
+\begin{abstract}
+
+Based on the \PLANCK~2015 data release maps \citep{planck2015}, we present a 
+thermal dust emission analysis analogous to that of \cite{meisner15}. We 
+isolate thermal dust emission in the \PLANCK~frequency maps, and present 
+full-sky models of the unpolarized thermal dust emission using several 
+paremeterizations of the dust spectrum, including single modified blackbody and
+two-component models. The qualitative conclusions of \cite{meisner15} remain 
+unchanged. In particular, the zodiacal light still represents the dominant 
+systematic problem of our dust model on large angular scales, and the cosmic 
+infrared background anisotropy remains the dominant systematic problem on small
+angular scales.
+
+%We apply the \cite{FDS99} two-component thermal dust emission model to the
+%\PLANCK~HFI maps. This parametrization of the far-infrared dust spectrum as 
+%the sum of two modified blackbodies serves as an important alternative to the 
+%commonly adopted single modified blackbody (MBB) dust emission model. 
+%Analyzing the joint \PLANCK/DIRBE dust spectrum, we show that two-component 
+%models provide a better fit to the 100-3000 GHz emission than do single-MBB 
+%models, though by a lesser margin than found by \cite{FDS99} based on FIRAS 
+%and DIRBE. We also derive full-sky $6.1'$ resolution maps of dust optical 
+%depth and temperature by fitting the two-component model to \PLANCK~217-857 
+%GHz along with  DIRBE/\IRAS~100$\mu$m data. Because our two-component model
+%matches the dust spectrum near its peak, accounts for the spectrum's 
+%flattening at millimeter wavelengths, and specifies dust temperature at 6.1$'$
+%FWHM, our model provides reliable, high-resolution thermal dust emission 
+%foreground predictions from 100 to 3000 GHz. We find that, in diffuse sky 
+%regions, our two-component 100-217 GHz predictions are on average accurate to 
+%within 2.2\%, while extrapolating the \cite{planckdust} single-MBB model 
+%systematically underpredicts emission by 18.8\% at 100 GHz, 12.6\% at 143 GHz 
+%and 7.9\% at 217 GHz. We calibrate our two-component optical depth to 
+%reddening, and compare with reddening estimates based on stellar spectra. We 
+%find the dominant systematic problems in our temperature/reddening maps to be 
+%zodiacal light on large angular scales and the cosmic infrared background 
+%anisotropy on small angular scales.
+
+\end{abstract}
+
+\keywords{infrared: ISM, submillimeter: ISM, dust, extinction}
+
+\section{Introduction}
+We gratefully acknowledge support from the National Science Foundation Graduate
+Research Fellowship under Grant No. DGE1144152, and NASA grant NNX12AE08G. 
+Based on observations obtained with Planck (http://www.esa.int/Planck), an ESA 
+science mission with instruments and contributions directly funded by ESA 
+Member States, NASA, and Canada. This research made use of the NASA 
+Astrophysics Data System (ADS) and the IDL Astronomy User's Library at Goddard.
+\footnote{Available at \texttt{http://idlastro.gsfc.nasa.gov}}
+
+\bibliographystyle{apj}
+\bibliography{twocomp}
+
+\end{document}

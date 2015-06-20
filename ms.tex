@@ -5,6 +5,7 @@
 \usepackage{subfigure}
 \usepackage{mathrsfs}
 \usepackage{amsmath}
+\usepackage{xcolor}
 
 \newcommand{\IRAS}{{\it IRAS}}
 \newcommand{\HERSCHEL}{{\it Herschel}}
@@ -43,34 +44,31 @@ systematic problem of our dust model on large angular scales, and the cosmic
 infrared background anisotropy remains the dominant systematic problem on small
 angular scales.
 
-%We apply the \cite{FDS99} two-component thermal dust emission model to the
-%\PLANCK~HFI maps. This parametrization of the far-infrared dust spectrum as 
-%the sum of two modified blackbodies serves as an important alternative to the 
-%commonly adopted single modified blackbody (MBB) dust emission model. 
-%Analyzing the joint \PLANCK/DIRBE dust spectrum, we show that two-component 
-%models provide a better fit to the 100-3000 GHz emission than do single-MBB 
-%models, though by a lesser margin than found by \cite{FDS99} based on FIRAS 
-%and DIRBE. We also derive full-sky $6.1'$ resolution maps of dust optical 
-%depth and temperature by fitting the two-component model to \PLANCK~217-857 
-%GHz along with  DIRBE/\IRAS~100$\mu$m data. Because our two-component model
-%matches the dust spectrum near its peak, accounts for the spectrum's 
-%flattening at millimeter wavelengths, and specifies dust temperature at 6.1$'$
-%FWHM, our model provides reliable, high-resolution thermal dust emission 
-%foreground predictions from 100 to 3000 GHz. We find that, in diffuse sky 
-%regions, our two-component 100-217 GHz predictions are on average accurate to 
-%within 2.2\%, while extrapolating the \cite{planckdust} single-MBB model 
-%systematically underpredicts emission by 18.8\% at 100 GHz, 12.6\% at 143 GHz 
-%and 7.9\% at 217 GHz. We calibrate our two-component optical depth to 
-%reddening, and compare with reddening estimates based on stellar spectra. We 
-%find the dominant systematic problems in our temperature/reddening maps to be 
-%zodiacal light on large angular scales and the cosmic infrared background 
-%anisotropy on small angular scales.
+% mention frequency range 100-3000 GHz ?
+% cite the FDS99 model in the intro as well ?
+% mention that this isn't just a Planck-based SED, but includes DIRBE/IRAS ?
+% mention that this is first ever thermal dust model based on Planck 2015 ?
 
 \end{abstract}
 
 \keywords{infrared: ISM, submillimeter: ISM, dust, extinction}
 
 \section{Introduction}
+% brief importance of dust
+% iras first revolution in mapping ISM cirrus
+% planck more recent breakthrough in mapping dust emission due to high
+%     angular resolution / sensitivity of broad range of frequencies
+% mention the existing dust data products, say they're all very useful for
+%     many purposes
+% but say that they all still are not perfect, and we want to investigate
+%     what effect swapping in the latest planck release has on the dust model
+% and we also just want to have a model with data from latest Planck release,
+%     which has never been done by anyone before
+
+% list of the sections
+
+
+
 We gratefully acknowledge support from the National Science Foundation Graduate
 Research Fellowship under Grant No. DGE1144152, and NASA grant NNX12AE08G. 
 Based on observations obtained with Planck (http://www.esa.int/Planck), an ESA 
@@ -78,6 +76,38 @@ science mission with instruments and contributions directly funded by ESA
 Member States, NASA, and Canada. This research made use of the NASA 
 Astrophysics Data System (ADS) and the IDL Astronomy User's Library at Goddard.
 \footnote{Available at \texttt{http://idlastro.gsfc.nasa.gov}}
+
+\begin{center}
+\begin{deluxetable*}{ccccccccc}
+\tabletypesize{\scriptsize}
+\tablecolumns{8} 
+\tablewidth{0pc} 
+\tablecaption{\label{table:offs} Input Map Properties \& Pre-processing (2015 release)} 
+\tablehead{
+\colhead{$\nu$ (GHz)} &
+\colhead{Instrument(s)} &
+\colhead{Offset ($K_{CMB}$)} & 
+\colhead{Dipole ($K_{CMB}$)} & 
+\colhead{$s_{857,\nu}$$\times$$u_{\nu}$} &
+\colhead{$\sigma_{s_{857,\nu}}$$\times$$u_{\nu}$} &
+\colhead{$n_{\nu}$} ($K_{CMB}$) &
+\colhead{$c_{\nu}$} &
+\colhead{FWHM ($'$)}
+}
+\startdata
+100  & \PLANCK~HFI & \textcolor{red}{9.65$\times$10$^{-6}$$\pm$4.00$\times$10$^{-7}$} & \textcolor{red}{1.77$\times$10$^{-6}$}    & \textcolor{red}{1.63$\times$10$^{-3}$} & \textcolor{red}{3.25$\times$10$^{-5}$}  & \textcolor{red}{5.06$\times$10$^{-5}$} & \textcolor{red}{0.0009} & \textcolor{red}{9.68}   \\
+143  & \PLANCK~HFI & \textcolor{red}{2.34$\times$10$^{-5}$$\pm$7.72$\times$10$^{-7}$} & \textcolor{red}{1.48$\times$10$^{-6}$}    & \textcolor{red}{4.79$\times$10$^{-3}$} & \textcolor{red}{9.58$\times$10$^{-5}$}  & \textcolor{red}{2.18$\times$10$^{-5}$} & \textcolor{red}{0.0007} & \textcolor{red}{7.30}   \\
+217  & \PLANCK~HFI & \textcolor{red}{6.68$\times$10$^{-5}$$\pm$2.70$\times$10$^{-6}$} & \textcolor{red}{9.05$\times$10$^{-6}$}    & \textcolor{red}{2.17$\times$10$^{-2}$} & \textcolor{red}{4.35$\times$10$^{-4}$}  & \textcolor{red}{3.06$\times$10$^{-5}$} & \textcolor{red}{0.0016} & \textcolor{red}{5.02}   \\
+353  & \PLANCK~HFI & \textcolor{red}{4.01$\times$10$^{-4}$$\pm$2.06$\times$10$^{-5}$} & \textcolor{red}{3.09$\times$10$^{-5}$}    & \textcolor{red}{9.90$\times$10$^{-2}$} & \textcolor{red}{1.98$\times$10$^{-3}$}  & \textcolor{red}{1.01$\times$10$^{-4}$} & \textcolor{red}{0.0078} & \textcolor{red}{4.94}   \\
+     &             & Offset (MJy/sr)                                                  & Dipole (MJy/sr)                           & $s_{857,\nu}$                          & $\sigma_{s_{857,\nu}}$                  & $n_{\nu}$ (MJy/sr)                     &                         &          \\ \cline{3-7} \\ [-2ex]
+545  & \PLANCK~HFI & \textcolor{red}{3.07$\times$10$^{-1}$$\pm$2.01$\times$10$^{-2}$} & \textcolor{red}{1.00$\times$10$^{-2}$}    & \textcolor{red}{3.36$\times$10$^{-1}$} & \textcolor{red}{6.71$\times$10$^{-3}$}  & \textcolor{red}{0.031}                 & \textcolor{red}{0.061}  & \textcolor{red}{4.83}   \\
+857  & \PLANCK~HFI & \textcolor{red}{4.72$\times$10$^{-1}$$\pm$6.00$\times$10$^{-2}$} & -                                         & \textcolor{blue}{1.0}                  & \textcolor{blue}{2.0$\times$10$^{-2}$}  & \textcolor{red}{0.028}                 & \textcolor{red}{0.064}  & \textcolor{red}{4.64}   \\
+1250 & DIRBE       & \textcolor{red}{7.04$\times$10$^{-2}$$\pm$1.19$\times$10$^{-1}$} & -                                         & \textcolor{red}{2.05}                  & \textcolor{red}{4.10$\times$10$^{-2}$}  & \textcolor{blue}{0.42}                 & \textcolor{blue}{0.10}  & \textcolor{blue}{42}    \\
+2141 & DIRBE       & \textcolor{red}{9.94$\times$10$^{-2}$$\pm$1.53$\times$10$^{-1}$} & -                                         & \textcolor{red}{2.65}                  & \textcolor{red}{5.29$\times$10$^{-2}$}  & \textcolor{blue}{0.79}                 & \textcolor{blue}{0.10}  & \textcolor{blue}{42}    \\
+3000 & DIRBE/\IRAS & \textcolor{blue}{0.0$\pm$4.3$\times$10$^{-2}$}                   & -                                         & \textcolor{red}{1.30}                  & \textcolor{red}{2.60$\times$10$^{-2}$}  & \textcolor{blue}{0.06}                 & \textcolor{blue}{0.10}  & \ \textcolor{blue}{6.1}
+\enddata
+\end{deluxetable*}
+\end{center}
 
 \bibliographystyle{apj}
 \bibliography{twocomp}

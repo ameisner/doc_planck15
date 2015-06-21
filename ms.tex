@@ -178,6 +178,34 @@ optical depth we have obtained, and conclude in $\S$\ref{sec:conclusion}.
 \section{Dust Emission Model}
 \label{sec:modeling}
 
+\begin{center}
+\begin{deluxetable*}{llrrrrrrrrrr} 
+\tabletypesize{\scriptsize}
+\tablecolumns{11} 
+\tablewidth{0pc} 
+\tablecaption{\label{tab:global} Global Model Parameters (2015 release)} 
+\tablehead{
+\colhead{Number} &
+\colhead{Model} &
+\colhead{$f_1$} &
+\colhead{$q_1/q_2$} & 
+\colhead{$\beta_1$} & 
+\colhead{$\beta_2$} &
+\colhead{$T_2$} &
+\colhead{$T_1$} &
+\colhead{$n$} &
+\colhead{D.O.F.} &
+\colhead{$\chi^2$} &
+\colhead{$\chi^2_{\nu}$}
+}
+\startdata
+ 1 & FDS99 best-fit  & 0.0363 & 13.0 & 1.67 & 2.70 & 15.67 & 9.12 & 1.055 & 7 & 55.0 & 7.86 \\
+ 2 & FDS99 general   & 0.0457 & 8.03 & 1.59 & 2.83 & 15.68 & 9.71 & 0.998 & 3 & 6.42 & 2.14 \\
+ 3 & single MBB      & 0.0    &  ... &  ... & 1.56 & 19.86 & ...  & 1.016 & 6 & 48.0 & 7.99 \\ %[-2ex]
+\enddata
+\end{deluxetable*}
+\end{center}
+
 \section{Predicting the Observed SED}
 \label{sec:bpcorr}
 
@@ -237,34 +265,6 @@ science mission with instruments and contributions directly funded by ESA
 Member States, NASA, and Canada. This research made use of the NASA 
 Astrophysics Data System (ADS) and the IDL Astronomy User's Library at Goddard.
 \footnote{Available at \texttt{http://idlastro.gsfc.nasa.gov}}
-
-\begin{center}
-\begin{deluxetable*}{llrrrrrrrrrr} 
-\tabletypesize{\scriptsize}
-\tablecolumns{11} 
-\tablewidth{0pc} 
-\tablecaption{\label{tab:global} Global Model Parameters (2015 release)} 
-\tablehead{
-\colhead{Number} &
-\colhead{Model} &
-\colhead{$f_1$} &
-\colhead{$q_1/q_2$} & 
-\colhead{$\beta_1$} & 
-\colhead{$\beta_2$} &
-\colhead{$T_2$} &
-\colhead{$T_1$} &
-\colhead{$n$} &
-\colhead{D.O.F.} &
-\colhead{$\chi^2$} &
-\colhead{$\chi^2_{\nu}$}
-}
-\startdata
- 1 & FDS99 best-fit  & 0.0363 & 13.0 & 1.67 & 2.70 & 15.67 & 9.12 & 1.055 & 7 & 55.0 & 7.86 \\
- 2 & FDS99 general   & 0.0457 & 8.03 & 1.59 & 2.83 & 15.68 & 9.71 & 0.998 & 3 & 6.42 & 2.14 \\
- 3 & single MBB      & 0.0    &  ... &  ... & 1.56 & 19.86 & ...  & 1.016 & 6 & 48.0 & 7.99 \\ %[-2ex]
-\enddata
-\end{deluxetable*}
-\end{center}
 
 \bibliographystyle{apj}
 \bibliography{twocomp}

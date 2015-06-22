@@ -73,16 +73,33 @@ with the best possible angular resolution and sensitivity.
 %     angular resolution / sensitivity of broad range of frequencies
 The \PLANCK~mission \citep{planck2013,planck2015} has recently provided a 
 breakthrough in full-sky mapping of emission from interstellar dust, by 
-obtaining relatively artifact free, full-sky maps in nine bandpasses from QQ to
-PP GHz, with a superb combination of near-IRAS resolution from QQ-PP and high 
-sensitivity. Although these \PLANCK~maps contain various emission components, 
-including the CMB, zodiacal light,and molecular emission, it is nevertheless 
-possible to isolate exquisite maps of thermal emission from interstellar dust 
-grains.
+obtaining relatively artifact free, full-sky maps in nine bandpasses from 30 
+GHz to 857 GHz, with a superb combination of very high sensitivity and 
+near-\IRAS~resolution from 217 GHz to 857 GHz. Although these \PLANCK~maps 
+contain a superposition of various emission components, including the CMB, 
+compact sources, and molecular emission, it is nevertheless possible to isolate
+exquisite maps of thermal emission from interstellar dust grains.
+
 % mention the existing dust data products, say they're all very useful for
 %     many purposes
 Several full-sky data products currently exist for predicting emission and/or
-extinction by interstellar dust. SFD - mention DIRBE temperature limitation.
+extinction by interstellar dust. For many years, the 
+\citet[hereafter SFD]{SFD} dust map has been the industry standard for 
+predicting Galactic reddening. The SFD reddening predictions rely on the
+\IRAS~100$\mu$m dust emission map as a $6.1'$ FWHM template for dust optical 
+depth, after modulating the emission by a $1.3^{\circ}$ FWHM temperature 
+correction based on the DIRBE 140$\mu$m/240$\mu$m ratio, assuming the dust
+emits as a $\beta$=2 modified blackbody (MBB). \citet[henceforth FDS99]{FDS99} 
+combined the \IRAS/DIRBE data sets used by SFD with the FIRAS \citep{firas} 
+dust spectra from 100-3000 GHz to extrapolate thermal dust emission from 
+\IRAS~wavelengths to CMB frequencies. FDS99 found that no single MBB could
+adequately fit the relatively sharp peak of the dust spectral energy 
+distribution (SED) while also capturing the spectrum's flattening toward
+millimeter wavelengths. FDS99 therefore fit the dust SED with a linear 
+combination of two MBBs, which can be thought of as representing two 
+distinct grain species in equilibrium with the same ISRF.
+
+Both SFD/FDS99 DIRBE temperature limitation.
 Planck allows us to get around temperature limitation. One sentence overview of
 Planck team's model. One or two sentences about Meisner+Finkbeiner modeling.
 
@@ -95,10 +112,10 @@ Meisner + Finkbeiner. Also, no Planck 2015 release thermal dust model yet
 exists at all.
 
 % list of the sections
-Much of our detailed methodology is identical to that of Meisner/Finkbeiner 
-2015. As a result, throughout this paper, we mainly emphasize any notable 
-differences relative, and otherwise refer the reader to Meisner/Finkbeiner 
-2015 for thorough details.
+Much of our detailed methodology is identical to that of \cite{meisner15}. As a
+result, throughout this paper, we mainly emphasize any notable differences 
+relative to this previously published work, and otherwise refer the reader to 
+\cite{meisner15} for thorough details.
 
 In $\S$\ref{sec:data} we introduce the data used throughout this study. In
 $\S$\ref{sec:prepro} we describe our preprocessing of the \PLANCK~maps to

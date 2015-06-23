@@ -177,8 +177,27 @@ and $\S$\ref{sec:hier}, we also make use of the SFD reprocessings of DIRBE
 \section{Preprocessing}
 \label{sec:prepro}
 
+The following subsections detail the processing steps we have applied to 
+isolate Galactic dust emission in the \PLANCK~maps in preparation for SED
+fitting.
+
 \subsection{CMB Anisotropy Removal}
 \label{sec:cmb}
+
+We first addressed the CMB anisotropies before performing any of the 
+interpolation/smoothing described in $\S$\ref{sec:ptsrc}/$\S$\ref{sec:smth}. 
+The CMB anisotropies are effectively imperceptible upon visual inspection 
+of \PLANCK~857 GHz, but can be perceived at a low level in \PLANCK~545 GHz, and
+are prominent at 100-353 GHz relative to the Galactic emission
+we wish to characterize, especially at high latitudes. 
+
+% mention hybrid 2013/2015 release SMICA model to account for more aggressive
+% inpainting ...
+To remove the CMB anisotropies, we have subtracted the Spectral Matching 
+Independent Component Analysis \citep[SMICA,][]{smica} model from each of the 
+\PLANCK~maps, applying appropriate unit conversions for the 545 and 857 GHz 
+maps with native units of MJy/sr. Low-order corrections, particularly our 
+removal of  Solar dipole residuals, are discussed in $\S$\ref{sec:zp}.
 
 \subsection{Compact Sources}
 \label{sec:ptsrc}
@@ -188,6 +207,18 @@ and $\S$\ref{sec:hier}, we also make use of the SFD reprocessings of DIRBE
 
 \subsection{Molecular Emission}
 \label{sec:mole}
+
+The \cite{planckdust} modeling did not attempt to correct for Galactic CO 
+emission, due to the fact that CO emission is only important relative to
+dust emission over a small region of the sky, predominantly in the Galactic 
+plane and nearby molecular clouds. \cite{meisner15} attempted a CO correction 
+based on the \cite{planckco} full-sky CO map. However, we have judged that the 
+CO map becomes unreliable in the very highest-signal regions of molecular
+clouds, and have therefore decided to adopt the \cite{planckdust} strategy
+of making no CO correction. Because of this decision, we exclude 
+CO-contaminated regions of the sky from all downstream analyses which are 
+sensitive to the dust SED shape at low frequencies which are affected by CO 
+line emission.
 
 \subsection{Zero Level}
 \label{sec:zp}

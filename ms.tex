@@ -43,7 +43,6 @@ represents the dominant systematic problem on large angular scales, and the
 cosmic infrared background anisotropy remains the dominant systematic problem 
 on small angular scales.
 
-% mention frequency range 100-3000 GHz ?
 % cite the FDS99 model in the intro as well ?
 % mention that this isn't just a Planck-based SED, but includes DIRBE/IRAS ?
 % mention that this is first ever thermal dust model based on Planck 2015 ?
@@ -155,6 +154,25 @@ optical depth we have obtained, and conclude in $\S$\ref{sec:conclusion}.
 
 \section{Data}
 \label{sec:data}
+
+The \PLANCK~frequency maps utilized throughout this work are drawn from the 
+\PLANCK~2015 data release \citep{planck2015}. Specifically, we have made use 
+of all six of the zodiacal light corrected HFI intensity maps
+\citep[\texttt{2048\_R2.00\_full\_ZodiCorrected},][]{planckzodi}.
+
+To incorporate measurements on the Wien side of the dust emission spectrum, 
+we include 100$\mu$m data in our SED fits. In particular, we use the 
+\citet[henceforth SFD]{SFD} reprocessing of DIRBE/\IRAS~100$\mu$m, which we 
+will refer to as \verb|i100|, and at times by frequency as 3000 GHz. The 
+\verb|i100| map has angular resolution of $6.1'$, and was constructed so as to 
+contain only thermal emission from Galactic dust, with compact sources and 
+zodiacal light removed, and its zero level tied to H\,\textsc{i}. We use the 
+\verb|i100| map as is, without any custom modifications. 
+
+In some of our FIR dust SED analyses which do not require high angular 
+resolution, specifically those of $\S$\ref{sec:global}, $\S$\ref{sec:lores}, 
+and $\S$\ref{sec:hier}, we also make use of the SFD reprocessings of DIRBE 
+140$\mu$m (2141 GHz) and 240$\mu$m (1250 GHz).
 
 \section{Preprocessing}
 \label{sec:prepro}

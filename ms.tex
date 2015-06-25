@@ -347,6 +347,26 @@ zero level determination described in $\S$\ref{sec:zp_abs}.}
 \section{Data Release}
 \label{sec:release}
 
+\begin{center}
+\begin{deluxetable}{ll} 
+\tabletypesize{\scriptsize}
+\tablecolumns{2} 
+\tablewidth{0pc} 
+\tablecaption{\label{tab:bitmask} Bit-mask Summary} 
+\tablehead{
+\colhead{Bit} &
+\colhead{Description}
+}
+\startdata
+ 0 & SFD compact source \\
+ 1 & SFD big object     \\
+ 2 & SFD no \IRAS       \\
+ 3 & SMICA inpainted    \\
+ 4 & CO emission        \\  %[-2ex]
+\enddata
+\end{deluxetable}
+\end{center}
+
 \begin{figure*}
 \begin{center}
 \epsfig{file=fig/results.eps, width=7.0in}
